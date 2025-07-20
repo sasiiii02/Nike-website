@@ -1,13 +1,14 @@
 import React from 'react'
 
-const ShoeCard = ({imgURL,changeBigShoeImage,bigShowImg}) => {
+const ShoeCard = ({imgURL,changeBigShoeImage,bigShoeImg}) => {
   const handleClick=()=>{
-    if(bigShowImg!==imgURL.bigShoe){
+    if(bigShoeImg!==imgURL.bigShoe){
       changeBigShoeImage(imgURL.bigShoe)
     }
   }
   return (
-    <div className={`border-2 rounded-xl ${bigShowImg===imgURL?'border-coral-red':'border-transparent'}
+    <div className={`border-2 rounded-xl 
+      ${bigShoeImg===imgURL.bigShoe?'border-coral-red':'border-transparent'}
     cursor-pointer max-sm:flex-1
     `} 
     onClick={handleClick}
